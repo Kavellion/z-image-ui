@@ -1,4 +1,5 @@
 # Z-Image Turbo UI
+Easiest install: grab the bundled zip from the Releases tab — no Python setup needed.
 
 ## Before you start
 
