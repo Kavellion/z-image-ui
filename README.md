@@ -1,9 +1,8 @@
 # Z-Image Turbo UI
-Easiest install: grab the bundled zip from the Releases tab — no Python setup needed.
 
 ## Before you start
 
-- A Windows PC with Python 3.12 installed first from python.org — tick "Add python.exe to PATH" during install. This app uses `py -3.12`, not 3.10.
+- A Windows PC. Python is included in this package (a bundled Python 3.12 in `python_embeded\`) — there is nothing to install first, and any Python you already have is left completely alone.
 - An NVIDIA graphics card (12 GB is plenty), about 20 GB free disk space, and an internet connection.
 - The first Generate downloads about 15 GB of model weights on the default quantized path (about 20 GB if you switch to full BF16).
 - No token, no account, no license acceptance. Z-Image Turbo is Apache 2.0 and ungated — the first download just works.
@@ -45,14 +44,14 @@ No animation, no upscaling, no editing, no ControlNet, no inpainting, no img2img
 ## Requirements
 
 - Windows, an NVIDIA GPU (12 GB is plenty), and a recent driver
-- Python 3.12, with "Add python.exe to PATH" ticked. This is NOT optional and NOT the Python your other apps use: Diffusers 0.42 dropped Python 3.10, so this app needs 3.12. Install 3.12 side by side -- your Python 3.10 install is left completely alone, and this app lives entirely in its own `.venv` built from 3.12
+- Python: nothing to install -- Python 3.12 is bundled in `python_embeded\` inside this package. (Diffusers 0.42 dropped Python 3.10, so the app needs the 3.12 line; it is included, so there is no separate Python install, and any Python you already have is left completely alone.)
 - Disk space: about 20 GB free for the first download (about 15 GB on the default quantized path), plus room for pictures
 - System RAM: 16 GB is fine -- the quantized transformer is 4-7 GB and the text encoder stays on CPU except while encoding, so nothing like the 20 GB pileup that sank heavier models
 
 ## Install
 
-1. Install Python 3.12 from python.org (tick "Add python.exe to PATH"). If you already have another Python, this sits alongside it -- nothing existing is changed.
-2. Double-click `install.bat` and wait -- it builds a Python 3.12 virtual environment and installs PyTorch with CUDA plus the packages. Run it again if anything interrupts it; it resumes where it stopped.
+1. Download this package and unzip it anywhere you like. Python is included -- there is nothing to install first.
+2. Double-click `install.bat` and wait -- it sets up pip in the bundled Python and installs PyTorch with CUDA plus the packages. Run it again if anything interrupts it; it resumes where it stopped.
 3. Double-click `run.bat`. A page opens in your browser. Type a prompt and hit Generate.
 
 install.bat does NOT need re-running for code-only updates: if only app.py changed, just replace the file and run run.bat again.
